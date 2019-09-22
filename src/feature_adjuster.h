@@ -14,7 +14,12 @@ class DetectorAdjuster: public cv::Feature2D
 {
 public:
     ///Initial values are for SURF detector
-    DetectorAdjuster(std::string detector_name, double initial_thresh=200.f, double min_thresh=2, double max_thresh=10000, double increase_factor=1.3, double decrease_factor=0.7 );
+    DetectorAdjuster(std::string detector_name, 
+                     double initial_thresh=200.f,
+                     double min_thresh=2, 
+                     double max_thresh=10000, 
+                     double increase_factor=1.3, 
+                     double decrease_factor=0.7 );
     
     virtual void tooFew(int minv, int n_detected);
     virtual void tooMany(int maxv, int n_detected);

@@ -54,7 +54,12 @@
 using namespace cv;
 
 
-DetectorAdjuster::DetectorAdjuster(std::string detector_name, double initial_thresh, double min_thresh, double max_thresh, double increase_factor, double decrease_factor ) :
+DetectorAdjuster::DetectorAdjuster(std::string detector_name, 
+                                   double initial_thresh, 
+                                   double min_thresh, 
+                                   double max_thresh, 
+                                   double increase_factor, 
+                                   double decrease_factor ) :
     thresh_(initial_thresh), 
     min_thresh_(min_thresh), max_thresh_(max_thresh),
     increase_factor_(increase_factor), decrease_factor_(decrease_factor),
