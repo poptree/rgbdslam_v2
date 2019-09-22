@@ -201,7 +201,13 @@ void GraphManager::createOptimizer(std::string backend, g2o::SparseOptimizer* op
 }
 
 
-QList<int> GraphManager::getPotentialEdgeTargetsWithDijkstra(const Node* new_node, int sequential_targets, int geodesic_targets, int sampled_targets, int predecessor_id, bool include_predecessor)
+QList<int> GraphManager::getPotentialEdgeTargetsWithDijkstra(
+  const Node* new_node, 
+  int sequential_targets, 
+  int geodesic_targets, 
+  int sampled_targets, 
+  int predecessor_id, 
+  bool include_predecessor)
 {
     QList<int> ids_to_link_to; //return value
     if(predecessor_id < 0) predecessor_id = graph_.size()-1;

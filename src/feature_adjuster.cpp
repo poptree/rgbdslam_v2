@@ -231,8 +231,15 @@ void VideoDynamicAdaptedFeatureDetector::detect(InputArray _image, std::vector<K
 /*
  *  VideoGridAdaptedFeatureDetector
  */
-VideoGridAdaptedFeatureDetector::VideoGridAdaptedFeatureDetector( const cv::Ptr<StatefulFeatureDetector>& _detector, int _maxTotalKeypoints, int _gridRows, int _gridCols, int _edgeThreshold)
-    : maxTotalKeypoints(_maxTotalKeypoints), gridRows(_gridRows), gridCols(_gridCols), edgeThreshold(_edgeThreshold)
+VideoGridAdaptedFeatureDetector::VideoGridAdaptedFeatureDetector( const cv::Ptr<StatefulFeatureDetector>& _detector, 
+                                                                  int _maxTotalKeypoints, 
+                                                                  int _gridRows, 
+                                                                  int _gridCols, 
+                                                                  int _edgeThreshold)
+    : maxTotalKeypoints(_maxTotalKeypoints), 
+      gridRows(_gridRows), 
+      gridCols(_gridCols), 
+      edgeThreshold(_edgeThreshold)
 {
   detectors.push_back(_detector);//Use original one
   while(detectors.size() < gridRows*gridCols){
